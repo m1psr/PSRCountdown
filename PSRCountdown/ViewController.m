@@ -8,13 +8,15 @@
 
 #import "ViewController.h"
 
+@import AVFoundation;
+
 @import AudioToolbox;
 
 @interface ViewController () <UIPickerViewDataSource, UIPickerViewDelegate>
 {
     NSArray *_dataComponent;
     NSTimer *_timer;
-    
+    AVPlayer *_player;
     SystemSoundID _timerWakeUpSignal;
     NSTimer *_timerSignalOff;
 }
@@ -131,20 +133,9 @@
 
 - (void)p_playWakeUpSound
 {
-    // http://stackoverflow.com/questions/9791491/best-way-to-play-simple-sound-effect-in-ios
+    _player = [[AVPlayer alloc]initWithURL:[[NSBundle mainBundle] URLForResource:@"best_wake_up_sound" withExtension:@"mp3"]];
+    [_player play];
     
-    NSString *path  = [[NSBundle mainBundle] pathForResource:@"best_wake_up_sound" ofType:@"mp3"];
-    NSURL *pathURL = [NSURL fileURLWithPath : path];
-    
-    
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef) pathURL, &_timerWakeUpSignal);
-    AudioServicesPlaySystemSound(_timerWakeUpSignal);
-    
-    // call the following function when the sound is no longer used
-    // (must be done AFTER the sound is done playing)
-    // AudioServicesDisposeSystemSoundID(_timerWakeUpSignal);
-    
-    NSAssert(!_timerSignalOff, @"_timerSignalOff != nil");
     _timerSignalOff = [NSTimer scheduledTimerWithTimeInterval:30.0
                                                        target:self
                                                      selector:@selector(p_stopWakeUpSound)
@@ -154,7 +145,7 @@
 
 - (void)p_stopWakeUpSound
 {
-    AudioServicesDisposeSystemSoundID(_timerWakeUpSignal);
+    [_player pause];
     [_timerSignalOff invalidate];
     _timerSignalOff = nil;
 }
