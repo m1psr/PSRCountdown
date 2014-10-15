@@ -14,6 +14,7 @@
 		0C04FEDA19ED5597005FC29F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C04FED919ED5597005FC29F /* Images.xcassets */; };
 		0C04FEDD19ED5597005FC29F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C04FEDB19ED5597005FC29F /* LaunchScreen.xib */; };
 		0C04FEE919ED5597005FC29F /* PSRCountdownTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C04FEE819ED5597005FC29F /* PSRCountdownTests.m */; };
+		0C4902E519EE83CD00B839D0 /* best_wake_up_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0C4902E419EE83CD00B839D0 /* best_wake_up_sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,9 @@
 		0C04FEE219ED5597005FC29F /* PSRCountdownTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PSRCountdownTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C04FEE719ED5597005FC29F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C04FEE819ED5597005FC29F /* PSRCountdownTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSRCountdownTests.m; sourceTree = "<group>"; };
+		0C4902E419EE83CD00B839D0 /* best_wake_up_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = best_wake_up_sound.mp3; sourceTree = "<group>"; };
+		0C4902E619EE963700B839D0 /* IMG_3355.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_3355.PNG; sourceTree = "<group>"; };
+		0C4902E719EE963700B839D0 /* IMG_3356.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_3356.PNG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 		0C04FEC019ED5597005FC29F = {
 			isa = PBXGroup;
 			children = (
+				0C4902E619EE963700B839D0 /* IMG_3355.PNG */,
+				0C4902E719EE963700B839D0 /* IMG_3356.PNG */,
 				0C04FECB19ED5597005FC29F /* PSRCountdown */,
 				0C04FEE519ED5597005FC29F /* PSRCountdownTests */,
 				0C04FECA19ED5597005FC29F /* Products */,
@@ -96,6 +102,7 @@
 		0C04FECC19ED5597005FC29F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0C4902E419EE83CD00B839D0 /* best_wake_up_sound.mp3 */,
 				0C04FECD19ED5597005FC29F /* Info.plist */,
 				0C04FECE19ED5597005FC29F /* main.m */,
 			);
@@ -200,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C04FED819ED5597005FC29F /* Main.storyboard in Resources */,
+				0C4902E519EE83CD00B839D0 /* best_wake_up_sound.mp3 in Resources */,
 				0C04FEDD19ED5597005FC29F /* LaunchScreen.xib in Resources */,
 				0C04FEDA19ED5597005FC29F /* Images.xcassets in Resources */,
 			);
@@ -346,6 +354,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PSRCountdown/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -357,6 +366,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PSRCountdown/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -416,6 +426,7 @@
 				0C04FEEE19ED5597005FC29F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C04FEEF19ED5597005FC29F /* Build configuration list for PBXNativeTarget "PSRCountdownTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +435,7 @@
 				0C04FEF119ED5597005FC29F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -49,13 +50,22 @@
                                     <action selector="countdownButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LII-Yr-L3w"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BgN-F1-K3h" userLabel="Sound Off">
+                                <rect key="frame" x="420" y="401" width="30" height="30"/>
+                                <state key="normal" image="soundOff"/>
+                                <connections>
+                                    <action selector="soundOffButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="SSr-hB-fQL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.73397380840445825" green="1" blue="0.8440651524988636" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="svg-EC-LI3" secondAttribute="centerY" priority="750" id="81E-zH-TUy"/>
                             <constraint firstItem="Fbw-4Z-xo9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="WOD-Ex-KhS" secondAttribute="bottom" constant="20" id="BgN-MJ-Nti"/>
                             <constraint firstAttribute="centerX" secondItem="svg-EC-LI3" secondAttribute="centerX" id="KaX-9N-k3t"/>
+                            <constraint firstItem="BgN-F1-K3h" firstAttribute="top" secondItem="Zmw-cP-Lvw" secondAttribute="top" id="Om0-EA-hcT"/>
                             <constraint firstItem="Zmw-cP-Lvw" firstAttribute="top" secondItem="svg-EC-LI3" secondAttribute="bottom" constant="8" id="PA2-F1-cin"/>
+                            <constraint firstItem="BgN-F1-K3h" firstAttribute="trailing" secondItem="svg-EC-LI3" secondAttribute="trailing" id="Td7-VM-8mn"/>
                             <constraint firstItem="Zmw-cP-Lvw" firstAttribute="centerX" secondItem="WOD-Ex-KhS" secondAttribute="centerX" id="U3x-wl-vat"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Fbw-4Z-xo9" secondAttribute="bottom" constant="20" id="V4o-nS-EI8"/>
                             <constraint firstAttribute="centerX" secondItem="Zmw-cP-Lvw" secondAttribute="centerX" id="a7F-S1-Bvh"/>
@@ -75,6 +85,7 @@
                         <outlet property="countdownButton" destination="Zmw-cP-Lvw" id="rRg-MQ-w1D"/>
                         <outlet property="countdownPicker" destination="svg-EC-LI3" id="MTz-fm-IuA"/>
                         <outlet property="resetButton" destination="Fbw-4Z-xo9" id="NND-12-WCj"/>
+                        <outlet property="soundOffButton" destination="BgN-F1-K3h" id="7Ds-dD-Rag"/>
                         <outlet property="stopButton" destination="WOD-Ex-KhS" id="KXm-if-Qhm"/>
                     </connections>
                 </viewController>
@@ -82,4 +93,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="soundOff" width="30" height="30"/>
+    </resources>
 </document>
