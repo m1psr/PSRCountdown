@@ -110,20 +110,20 @@
 
 - (void)p_refreshButtons
 {
+    NSUInteger min = [self.countdownPicker selectedRowInComponent:0];
+    NSUInteger sec = [self.countdownPicker selectedRowInComponent:1];
+    
     if (_timer) {
+        self.countdownPicker.userInteractionEnabled = NO;
         self.countdownButton.enabled = NO;
         self.stopButton.enabled = YES;
-        self.resetButton.enabled = YES;
     } else {
-        NSUInteger min = [self.countdownPicker selectedRowInComponent:0];
-        NSUInteger sec = [self.countdownPicker selectedRowInComponent:1];
-        
+        self.countdownPicker.userInteractionEnabled = YES;
         self.countdownButton.enabled = (min || sec) ? YES : NO;
-        
         self.stopButton.enabled = NO;
-        self.resetButton.enabled = NO;
     }
-    
+
+    self.resetButton.enabled = (min || sec) ? YES : NO;
     self.soundOffButton.hidden = _timerSignalOff ? NO : YES;
 }
 
